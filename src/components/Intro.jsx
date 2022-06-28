@@ -4,8 +4,8 @@ const IntroSection = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-background: radial-gradient(circle at right, #ffd6fc , #e3ddee);
-
+//background: radial-gradient(circle at right, #ffd6fc , #e3ddee);
+max-width: 1400px;
 
 @media only screen and (max-width: 1164px){
   flex-direction: column;
@@ -80,7 +80,8 @@ line-height: 54px;
 
 const Intro = () => {
   return (
-    <IntroSection>
+    <div style={{background: "radial-gradient(circle at right, #ffd6fc , #e3ddee)", display: 'flex', justifyContent: 'center'}}>
+ <IntroSection>
     <Text>
       <Paragraph>
  Hi there! Меня зовут <span style={{fontWeight: '700'}}>Вероника</span> и я начинающий <span style={{fontWeight: '700'}}>Frontend разработчик</span>.
@@ -92,6 +93,8 @@ const Intro = () => {
        <Me />
     </PicBox>
     </IntroSection>
+    </div>
+   
   )
 }
 
